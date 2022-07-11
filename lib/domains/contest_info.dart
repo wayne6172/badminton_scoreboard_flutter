@@ -19,7 +19,7 @@ class ContestInfo {
     required this.endScore,
     required this.duece,
     required this.matchPoint,
-  })
+  });
 }
 
 class Duece {
