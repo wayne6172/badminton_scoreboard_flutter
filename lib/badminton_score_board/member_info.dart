@@ -5,12 +5,15 @@ class MemberInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: const [
-        Text('Hand-in'),
-        Text('Image'),
-        Text('Name'),
-      ],
+    return Center(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [
+          Text('Hand-in'),
+          Text('Image'),
+          Text('Name'),
+        ],
+      ),
     );
   }
 }
