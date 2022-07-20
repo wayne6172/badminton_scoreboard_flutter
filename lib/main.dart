@@ -1,12 +1,17 @@
+import 'package:badminton_scoreboard_flutter/playing_rules_setting/play_rule.dart';
 import 'package:badminton_scoreboard_flutter/playing_rules_setting/play_rules_setting.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'badminton_score_board/badminton_scoreboard.dart';
 import 'menu.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (_) => PlayRule(),
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +24,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       routes: <String, WidgetBuilder>{
         PlayRulesSetting.routeName: (BuildContext context) =>
-            PlayRulesSetting(),
+            const PlayRulesSetting(),
         BadmintonScoreboard.routeName: (BuildContext context) =>
             const BadmintonScoreboard(),
       },
